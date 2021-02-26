@@ -8,8 +8,6 @@ describe('User endpoints', () => {
     state: "INACTIVE",
   }
 
-  const userResponse = user
-
   it('Lists all Users', async done => {
     const response = await request(server).get('/api/user')
     expect(response.statusCode).toEqual(200)
@@ -23,7 +21,7 @@ describe('User endpoints', () => {
       .send(user)
 
     expect(response.statusCode).toEqual(201)
-    expect(response.body).toMatchObject(userResponse)
+    expect(response.body).toMatchObject(user)
     done()
   })
 
@@ -33,7 +31,7 @@ describe('User endpoints', () => {
       .send(user)
 
     expect(response.statusCode).toEqual(202)
-    expect(response.body).toMatchObject(userResponse)
+    expect(response.body).toMatchObject(user)
     done()
   })
 
@@ -42,7 +40,7 @@ describe('User endpoints', () => {
       .get('/api/user/1')
 
     expect(response.statusCode).toEqual(200)
-    expect(response.body).toMatchObject(userResponse)
+    expect(response.body).toMatchObject(user)
     done()
   })
 
