@@ -23,7 +23,7 @@ const userExists = res => async id => {
   })
 
   if (!user) {
-    return handleError(res, 404)({ message: 'User does not exist' })
+    handleError(res, 404)({ message: 'User does not exist' })
   }
 }
 
@@ -52,7 +52,7 @@ exports.list = async function (req, res) {
     const users = await prisma.user.findMany()
     return respondWithResult(res, 200)(users)
   } catch (error) {
-    handleError(res, 500)(error)
+    return handleError(res, 500)(error)
   }
 }
 

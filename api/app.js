@@ -4,6 +4,7 @@ const app = express()
 const cors = require('cors')
 const api = require('./routes')
 
+// Register middlewares
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
