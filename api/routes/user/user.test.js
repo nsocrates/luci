@@ -58,7 +58,7 @@ describe('User endpoints', () => {
     const response = await request(server)
       .get('/api/user/1')
 
-      expect(response.statusCode).toEqual(404)
-      done()
+    expect(response.statusCode).toEqual(404)
+    done()
   })
 })
