@@ -23,7 +23,7 @@ const userExists = res => async id => {
   })
 
   if (!user) {
-    return respondWithResult(res, 404)({ message: 'User does not exist' })
+    return handleError(res, 404)({ message: 'User does not exist' })
   }
 }
 
