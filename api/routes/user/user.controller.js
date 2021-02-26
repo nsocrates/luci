@@ -17,6 +17,16 @@ const respondWithResult = (res, statusCode = 200) => entity => {
   }
 }
 
+const userExists = res => async id => {
+  const user = await prisma.user.findUnique({
+    where: { id },
+  })
+
+  if (!user) {
+    return respondWithResult(res, 404)({ message: 'User does not exist' })
+  }
+}
+
 // ==================================================================
 // Controls
 // ==================================================================
@@ -71,6 +81,8 @@ exports.update = async function (req, res) {
   const id = parseInt(req.params.id, 10)
 
   try {
+    await userExists(res)(id)
+
     const user = await prisma.user.update({
       where: { id },
       data: { name, group, state },
@@ -87,6 +99,7 @@ exports.destroy = async function (req, res) {
   const id = parseInt(req.params.id, 10)
 
   try {
+    await userExists(res)(id)
     await prisma.user.delete({ where: { id } })
     return res.sendStatus(204)
   } catch (error) {

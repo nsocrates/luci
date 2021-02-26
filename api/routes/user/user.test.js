@@ -1,14 +1,14 @@
 const request = require('supertest')
 const server = require('../../app.js')
-const { PrismaClient } = require('@prisma/client')
-const prisma = new PrismaClient()
 
 describe('User endpoints', () => {
-  const user = userResponse = {
+  const user = {
     name: "Kelly",
     group: "MARKETING",
     state: "INACTIVE",
   }
+
+  const userResponse = user
 
   it('Lists all Users', async done => {
     const response = await request(server).get('/api/user')

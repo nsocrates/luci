@@ -28,7 +28,7 @@ async function main() {
     create: {
       name: 'Alex J.',
       group: 'ENGINEERING',
-      state: 'INACTIVE'
+      state: 'INACTIVE',
     },
   }
 
