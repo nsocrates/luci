@@ -1,17 +1,34 @@
+import { useState } from 'react'
 import './User.css'
 
 function Form(props) {
+  const [nameErrorMessage, setNameError] = useState('')
+
   function handleChange(e) {
     e.preventDefault()
     const id = e.currentTarget.id
     const value = e.target.value
+
+    if (id === 'name' && value) {
+      setNameError('')
+    }
+
     props.onChange({ id, value })
   }
 
   function handleSubmit(e) {
     e.preventDefault()
-    props.onSubmit()
+    const { name } = props
+    if (name) {
+      props.onSubmit()
+    } else {
+      setNameError('Name cannot be blank')
+    }
   }
+
+  const nameInputClassName = nameErrorMessage
+    ? 'Form__Control Form__Control--error'
+    : 'Form__Control'
 
   return (
     <form data-testid="form" onSubmit={handleSubmit} className="Form">
@@ -22,10 +39,11 @@ function Form(props) {
         <input
           type="text"
           id="name"
-          className="Form__Control"
+          className={nameInputClassName}
           value={props.name}
           onChange={handleChange}
         />
+        <small className="Form__Error-Message">{nameErrorMessage}</small>
       </div>
 
       <div className="Form__Group">

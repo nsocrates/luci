@@ -28,6 +28,15 @@
   width: 100%;
 }
 
+.Form__Control--error {
+  outline: 0;
+  border-color: var(--color-accent);
+}
+
+.Form__Error-Message {
+  color: var(--color-accent);
+}
+
 .Form__Button-Group {
   display: flex;
   width: 100%;
