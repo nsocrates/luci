@@ -1,0 +1,39 @@
+.Form {
+  border: 1px solid var(--color-border);
+  padding: 60px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.Form__Group {
+  margin-bottom: 1em;
+}
+
+.Form__Label {
+  margin-bottom: 0;
+  font-weight: 300;
+  display: block;
+  font-size: 18px;
+  color: var(--text-light);
+}
+
+.Form__Control {
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  display: block;
+  font-size: 18px;
+  padding: 16px;
+  display: block;
+  width: 100%;
+}
+
+.Form__Button-Group {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+}
+
+.Form__Button-Group--space-between {
+  justify-content: space-between;
+}

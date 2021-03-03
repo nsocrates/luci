@@ -1,13 +1,112 @@
+@import-normalize;
+
+:root {
+  --color-accent: #ff4c63;
+  --text-color: #413f3e;
+  --text-light: #c1c1c0;
+  --color-border: #e2e2e2;
+  --site-gutter-width: 30px;
+  --gutter-width: 15px;
+  --row-gutter-width: -15px;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #fafafa;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+.Display-5 {
+  font-size: 38px;
+}
+
+.Lead {
+  font-size: 18px;
+}
+
+.Text-Light {
+  color: var(--text-light);
+}
+
+.Text-Center {
+  text-align: center;
+}
+
+.Link {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.Link:hover {
+  text-decoration: underline;
+}
+
+.Fixed-Center {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Section {
+  padding-top: var(--gutter-width);
+  padding-bottom: var(--gutter-width);
+}
+
+.Flex-Center {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
 }

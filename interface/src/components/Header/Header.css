@@ -1,0 +1,12 @@
+.Site-Header {
+  padding-top: var(--site-gutter-width);
+  padding-bottom: var(--site-gutter-width);
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.Site-Header__Title {
+  margin: 0;
+  line-height: 1;
+  flex: 1;
+}

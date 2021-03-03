@@ -1,0 +1,38 @@
+.Cards {
+  width: 100%;
+}
+
+.Card__Link {
+  display: block;
+  transition: transform 0.2s ease-in-out;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.Card__Item {
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  height: 200px;
+  padding: var(--gutter-width);
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.Card__Body {
+  width: 100%;
+}
+
+.Card__Body h2,
+.Card__Body h4 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .Card__Link:hover {
+    transform: scale(1.05);
+  }
+}
+

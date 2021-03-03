@@ -1,0 +1,22 @@
+.Nav__List {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.Nav__List-Item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.Nav__Link {
+  text-decoration: none;
+}
+
+.Nav__Link:hover {
+  color: var(--color-accent);
+}
