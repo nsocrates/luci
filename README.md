@@ -2,6 +2,11 @@
 
 ## Server
 
+### Installation
+
+1. Navigate to "./api" and run `npm install`
+2. Navigate to "./interface" and run `npm install`
+
 ### Setting up database
 
 1. Create database "lucidb":
