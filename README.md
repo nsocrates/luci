@@ -34,7 +34,7 @@
 
 `npm run lint`
 
-## Starting interface
+## Interface
 
 This is a standard create-react-app; you can run it with:
 
