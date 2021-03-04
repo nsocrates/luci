@@ -57,7 +57,7 @@ This is a standard create-react-app; you can run it with:
 
 ## Info
 
-This is a generic user management application that allows us to create, delete, and update users. Each user has three fields: name, group, and state. A user can belong to one of three groups: user, marketing, and engineering; that user can either be in a state of active or inactive. We can update any of the fields.
+This is a generic user management application that allows us to create, show, update, and delete users. Each user has three fields: name, group, and state. A user can belong to one of three groups: user, marketing, and engineering; that same user can either be in a state of active or inactive. We can update any of the fields by communicating with our backend.
 
 This application uses React on the front end; it uses Redux for state management. Redux allows us to have a single source of truth, meaning we only have one state object. By dispatching an action from a Component, we can change the state. We use the ES6 Fetch API to make HTTP requests.
 We abstract out our API calls to a middleware to remove code duplication. Instead of calling fetch inside the action, we return an object with the key 'CALL_API' and the parameters. The middleware will dispatch a REQUEST action before performing any sort of fetching. If the fetch succeeds, it will dispatch a SUCCESS action along with the payload; if it fails, it will dispatch a FAIL action with the error.
